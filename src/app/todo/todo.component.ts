@@ -29,6 +29,7 @@ export class TodoComponent implements OnInit {
     });
   }
   onAdd(itemTitle){
+    console.log("ds")
     this.todoService.addTitle(itemTitle.value);
     itemTitle.value = null;
   }
