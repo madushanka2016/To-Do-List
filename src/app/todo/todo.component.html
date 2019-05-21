@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- headre -->
+  <div class="jumbotron">
+    <div class="text-center">
+      <h1>TO DO LIST</h1>
+    </div>
+  </div>
+  <!-- list add feald -->
+  <div class="input-group">
+    <input type="text" class="form-control" (keyup.enter)="onAdd(itemTitle)">
+    <div class="input-froup-addon hover-cursor" (click)="onAdd(itemTitle)">
+      <i class="fa fa-plus-circle fa-2x"></i>
+    </div>
+  </div>
+  <!-- list show area -->
+  <div style="margin: 5px 0px">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let doItem of todoListArry">
+        <span class="hover-cusor" [class.text-success]="doItem.isChecked" 
+          (click)="chaneCheckStatus(doItem.$key,doItem.isChecked)">
+          <i class="fa fa-lg" [ngClass]="doItem.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+        </span>
+        {{ doItem.title }}
+        <span class="hover-cursor text-danger pull-right" (click)="deleteDoItem(doItem.$key)">
+          <i class="fa fa-trash-o fa-lg"></i>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
