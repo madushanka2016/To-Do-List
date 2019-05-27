@@ -1,4 +1,8 @@
-# Madu
+# To Do List
+This project create using `angular` and `firebase`.
+create basic to do list
+we can add item , delete item , update itiem(entaer item is complete or no)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
